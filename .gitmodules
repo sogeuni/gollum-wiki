@@ -1,3 +1,9 @@
 [submodule "wiki"]
 	path = wiki
 	url = https://github.com/sogeuni/wiki
+[submodule "gollum"]
+	path = gollum
+	url = https://github.com/sogeuni/gollum
+[submodule "gollum-lib"]
+	path = gollum-lib
+	url = https://github.com/sogeuni/gollum-lib
