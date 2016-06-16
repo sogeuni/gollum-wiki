@@ -14,7 +14,7 @@ DEAMON="/usr/local/bin/gollum"
 # --config   : the location of your config file
 #DEAMON_OPT="--config /home/sogeuni/www/gollum/config.rb"
 #DEAMON_OPT="--adapter rugged --live-preview --h1-title --emoji --template-dir /home/sogeuni/www/gollum-wiki/templates"
-DEAMON_OPT="--adapter rugged --live-preview --h1-title --template-dir /home/sogeuni/www/gollum-wiki/templates"
+DEAMON_OPT="--adapter rugged --h1-title --template-dir /home/sogeuni/www/gollum-wiki/templates"
 # The user the git repository belongs to
 USER="sogeuni"
 # The group the git repository belongs to
