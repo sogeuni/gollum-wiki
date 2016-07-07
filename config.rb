@@ -13,7 +13,9 @@ wiki_options = {
   :css => true,
   :js => true,
   :mathjax => true,
-  :h1_title => true
+  :h1_title => true,
+  :template_dir => '/home/sogeuni/www/gollum-wiki/templates',
+  :base_path => '/wiki'
 }
 Precious::App.set(:wiki_options, wiki_options)
 
@@ -22,10 +24,10 @@ options = {
   :providers => Proc.new do
     # Found https://github.com/settings/applications/
     #provider :github, '3a14a8ba5110df039074', 'ab33265e5ce2ecb4ffdc9183d1e71b961a9c5cf1'
-    provider :google_oauth2, '168349078301-7u849d4hk5j4u5a1r7sgspo33cqcia47.apps.googleusercontent.com', 'gnuAAUBbnAoYiCaKy9EKne-z', {
-      :scope => 'email,profile',
-      :access_type => 'online'
-    }
+    #provider :google_oauth2, '168349078301-7u849d4hk5j4u5a1r7sgspo33cqcia47.apps.googleusercontent.com', 'gnuAAUBbnAoYiCaKy9EKne-z', {
+    #  :scope => 'email,profile',
+    #  :access_type => 'online'
+    #}
   end,
   :dummy_auth => false,
   # If you want to make pages private:
@@ -40,6 +42,9 @@ options = {
   :authorized_users => ["sogeuni@gmail.com"],
 }
 
+Gollum::Filter::PlantUML.configure do |config|
+  config.url = "http://sogeuni.iptime.org:8080/plantuml/png"
+end
 
 ## :omnigollum options *must* be set before the Omnigollum extension is registered
 Precious::App.set(:omnigollum, options)
